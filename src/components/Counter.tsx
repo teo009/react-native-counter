@@ -21,14 +21,20 @@ const Counter = () => {
             </Text>
 
             <TouchableOpacity 
-                style={styles.buttonPlus}
+                style={[
+                    styles.button,
+                    styles.right,
+                ]}
                 onPress={handlePlus}
             >
                 <Text style={styles.textButton}>+1</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
-                style={styles.buttonLess}
+                style={[
+                    styles.button,
+                    styles.left,
+                ]}
                 onPress={handleLess}
             >
                 <Text style={styles.textButton}>-1</Text>
@@ -57,27 +63,22 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 25,
     },
-    buttonPlus: {
+    button: {
         backgroundColor: 'darkslategrey',
         borderRadius: 100,
         height: 70,
         width: 70,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    right: {
         position: 'absolute',
         bottom: 20,
         right: 20,
     },
-    buttonLess: {
-        backgroundColor: 'darkslategrey',
-        borderRadius: 100,
-        height: 70,
-        width: 70,
-        justifyContent: 'center',
-        textAlign: 'center',
-        alignItems: 'center',
+    left: {
         position: 'absolute',
         bottom: 20,
-        left: 20
+        left: 20,
     }
 })
